@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arras.io Room Maker</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="https://cdn.glitch.global/b0f6f364-0751-4a9d-9157-d3ef77a54548/favicon.ico?v=1677053011322">
+    <script src="/script.js" defer></script>
+  </head>
+  <body onload="onLoad()">
+    <h1>Config.jsonのroom作成ツール</h1>
+    <p>arras.io private serverのconfig.jsonにおける、ROOM_SETUPのコードを作成するツールです。</p>
+    <div style="display:flex;">
+      <div id="roomBox"></div>
+      <div class="roomInput">
+        <fieldset>
+          <legend><h3>&nbsp;roomの作成&nbsp;</h3></legend>
+          横<input type="number" id="xgrid">、縦<input type="number" id="ygrid">マス
+          <p>
+            部屋の名前: <input type="text" id="roomName">
+          </p>
+          <p>
+            <input type="checkbox" id="surround">
+            <label for="surround">wallで囲む</label>
+          </p>
+          <button class="btn" onclick="createRoom()">作成</button>
+        </fieldset>
+        <fieldset style="padding-bottom:40px">
+          <legend><h3>&nbsp;部屋の選択&nbsp;</h3></legend>
+            部屋の名前: <input type="text" id="selectName">
+        </fieldset>
+        <p style="font-size:15px">
+          ※表示が崩れることがあるため、部屋の名前は4文字以下を推奨します。
+        </p>
+      </div>
+    </div>
+    <button class="btn" onclick="output()" style="position:relative; left:320px;">
+      出力
+    </button>
+    <button class="copybtn" onclick="copyToClipboard()"
+            style="position:relative; left:320px;">
+      コピー
+    </button>
+    <div id="outputText"></div>
+    <h2>&nbsp;部屋の置き換え&nbsp;</h2>
+    <div class="customInput">
+      <p>
+        <label>置き換え前: <input type="text" id="beforeReplace"></label>
+        <label>&nbsp;置き換え後: <input type="text" id="afterReplace"></label>
+      </p>
+      <button class="btn" onclick="replaceRoom()">置換</button>
+    </div>
+    <h2>&nbsp;部屋の色のカスタム&nbsp;</h2>
+    <p>
+      部屋の色をカスタムできます。色は0~41で指定。
+    </p>
+    <div class="customInput">
+      <table id="customTable">
+        <tr>
+          <th width="350px">部屋の名前</th>
+          <th width="150px">色</th>
+        </tr>
+      </table>
+      <p>
+        <label>部屋の名前: <input type="text" id="customName"></label>
+        <label>色: <input type="number" id="customColor"></label>
+      </p>
+      <button class="btn" onclick="addCustomRoom()">決定</button>
+    </div>
+    <h2>&nbsp;roomのインポート&nbsp;</h2>
+    <p>
+      roomのインポートができます。○○:[[],[],...]をそのまま貼ってください。
+    </p>
+    <div class="customInput">
+      <textarea id="import"></textarea>
+      <button class="btn" onclick="importRoom()">決定</button>
+    </div>
+  </body>
+</html>
