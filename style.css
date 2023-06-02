@@ -1,0 +1,137 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  color: #1598d1;
+}
+
+h2 {
+  border-left: 5px solid #1598d1;
+  width: 20%; 
+  margin: 0 auto;
+}
+
+h3 {
+  border-left: 5px solid #1598d1;
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#roomBox {
+  border: 0.5em solid #c1c1c1;
+  border-radius: 5px;
+  margin: 1em;
+  width: 46.5%;
+  height: 580px;
+  user-select: none;
+  overflow: auto;
+}
+
+.roomInput {
+  background: whitesmoke;
+  padding: 20px;
+  font-size: 20px;
+  margin: 2em;
+  width: 40%;
+  height: 500px;
+}
+
+.customInput {
+  background: whitesmoke;
+  padding: 20px;
+  font-size: 20px;
+  margin: 1em 2em 1em 2em;
+  display: inline-block;
+  width: 750px;
+}
+
+#customTable {
+  width: 50%; 
+  margin: 0 auto;
+}
+.colorBox {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+}
+
+#customColor, #xgrid, #ygrid {
+  width: 50px;
+}
+
+.btn {
+  color: white;
+  background-color: #1598d1;
+  border-style: solid;
+  border-color: #1598d1;
+  border-width: 5px;
+  border-radius: 5px;
+  font-size: 19px;
+  font-family: Ubuntu, sans-serif;
+  height: 40px;
+  width: 80px;
+  margin-right: 5px;
+}
+.btn:hover {
+  color: darkblue;
+}
+
+.copybtn {
+  color: white;
+  background-color: #8cbc46;
+  border-style: solid;
+  border-color: #8cbc46;
+  border-width: 5px;
+  border-radius: 5px;
+  font-size: 19px;
+  font-family: Ubuntu, sans-serif;
+  height: 40px;
+  width: 80px;
+  margin-right: 5px;
+}
+.copybtn:hover {
+  color: darkgreen;
+}
+
+.deletebtn {
+  color: white;
+  background-color: #d11515;
+  border-style: solid;
+  border-color: #d11515;
+  border-width: 5px;
+  border-radius: 5px;
+  font-size: 19px;
+  font-family: Ubuntu, sans-serif;
+  height: 40px;
+  width: 80px;
+  margin-left: 5px;
+}
+.deletebtn:hover {
+  color: darkred;
+}
+
+#outputText {
+  text-align: left;
+  display: table;
+  background-color: #efefef;
+  font-family: Ubuntu-mono, monospace;
+  margin: 20px 0px 20px 20px;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0px 10px 10px 0px;
+  border-left: 5px solid #1598d1;
+}
+
+#import {
+  width: 680px;
+  height: 240px;
+  margin: 0px 0px 10px 0px;
+}
